@@ -1,0 +1,16 @@
+a(href='/customers/new') New Customer 
+h1=title
+  table
+    thead
+      tr
+        th Last Name
+        th Customer Number
+        th
+        th
+    tbody
+      each row in results
+        tr
+          td=row.LSTNAM
+          td: a(href=`/customers/${row.CUSNUM}`)=row.CUSNUM  
+          td: a(href=`/customers/${row.CUSNUM}/edit`) edit
+          td: a(href=`/customers/${row.CUSNUM}/delete`) delete

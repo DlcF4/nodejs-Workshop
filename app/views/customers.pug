@@ -1,0 +1,11 @@
+h1=title
+ table
+   thead
+     tr
+       th Last Name
+       th Customer Number
+   tbody
+     each row in results
+       tr
+         td=row.LSTNAM
+         td: a(href=`/customer/${row.CUSNUM}`)=row.CUSNUM

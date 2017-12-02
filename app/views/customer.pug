@@ -1,0 +1,18 @@
+h1=title
+table
+  tr
+    td: b Customer Number
+    td=result.CUSNUM
+  tr
+    td: b Last Name
+    td=result.LSTNAM
+  tr
+    td: b Initial
+    td=result.INIT
+  tr
+    td: b Street
+    td=result.STREET
+  tr
+    td: b City State, Zip
+    td= result.CITY + " " + result.STATE + ", " + result.ZIPCOD
+a(href='/customers') Back

@@ -6,4 +6,4 @@ http.createServer(function(req, res) {
   res.end('Hello World')
 }).listen(port, '0.0.0.0');
 
-console.log('Server running at http://spaces.litmis.com:%d', port)
+console.log('Server running at http://spaces.litmis.com:%d\ncrtl+c for exit', port)
