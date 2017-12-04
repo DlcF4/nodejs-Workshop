@@ -31,10 +31,9 @@ app.get('/customers/new', function(req, res) {
 })
 
 app.post('/customers/create', function(req, res) {
-  console.log(req.body);
   var sql = 
     `INSERT INTO ${schema}.CUSTOMER (CUSNUM,LSTNAM,INIT,STREET) VALUES (${req.body.CUSNUM}, '${req.body.LSTNAM}','${req.body.INIT}', '${req.body.STREET}')`
-    console.log(sql);
+  
   stmt = new db.dbstmt(dbconn);
   stmt.exec(sql, function(result, err){
     res.redirect('/customers')

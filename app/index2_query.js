@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
     stmt = new db.dbstmt(dbconn);
     stmt.exec(sql, function(results, err) {
     if(err){
-          console.log('err %s'+err);
+          console.log('err %s',err);
           res.render('error', { title: 'Error',reserr:{ sql: sql,resu:results,error:err}});
     } else {
           res.json(results);
