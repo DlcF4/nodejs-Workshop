@@ -1,0 +1,13 @@
+include ./includes/header.jade
+
+div.container
+    h2=title
+    p2='PERCENT_USED FROM QSYS2.SYSDISKSTAT .'
+    br
+    br
+    - each row, index in diskResults
+        p3= 'Disk ' + index + ': ' + parseInt(row.PERCENT_USED) + '% '
+        meter.meter(min='0', max='100', value=row.PERCENT_USED)
+        br
+        
+include ./includes/footer.jade

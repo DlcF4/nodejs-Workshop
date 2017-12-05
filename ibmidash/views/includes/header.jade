@@ -1,0 +1,81 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
+    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+    script(src="https://cdn.socket.io/socket.io-1.2.0.js")
+  body
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') IBM i Dash
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/')
+                | Home 
+                span.sr-only (current)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Dashes 
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/wrkactjob') WRKACTJOB
+                li
+                  a(href='/sysdiskstat') SYSDISKSTAT
+                li(role='separator', class='divider')
+                li
+                  a(href='/SYSTEM_STATUS_INFO') SYSTEM_STATUS_INFO
+                li
+                  a(href='/LICENSE_INFO') LICENSE_INFO
+                li
+                  a(href='/JOURNAL_INFO') JOURNAL_INFO
+                li
+                  a(href='/USER_INFO') USER_INFO
+                li
+                  a(href='/TCPIP_INFO') TCPIP_INFO
+                li
+                  a(href='/NETSTAT_INFO') NETSTAT_INFO
+                li
+                  a(href='/USER_STORAGE') USER_STORAGE
+                li
+                  a(href='/OUTPUT_QUEUE_INFO') OUTPUT_QUEUE_INFO
+                li
+                  a(href='/SERVER_SBS_ROUTING') SERVER_SBS_ROUTING
+                li
+                  a(href='/SYSTEM_VALUE_INFO') SYSTEM_VALUE_INFO
+                li
+                  a(href='/ACTIVE_JOB_INFO') ACTIVE_JOB_INFO
+                li
+                  a(href='/GROUP_PROFILE_ENTRIES') GROUP_PROFILE_ENTRIES
+                li
+                  a(href='/DRDA_AUTHENTICATION_ENTRY_INFO') DRDA_AUTHENTICATION_ENTRY_INFO
+                li
+                  a(href='/ENVIRONMENT_VARIABLE_INFO ') ENVIRONMENT_VARIABLE_INFO 
+                li(role='separator', class='divider')
+                li
+                  a(href='/users') Users
+                li
+                  a(href='/file_waste_schemas') File Waste
+                li
+                  a(href='/advised_index_schemas') Advised Indexes
+                li(role='separator', class='divider')
+                li
+                  a(href='/splf_stg') Spoolfile storage
+                li
+                  a(href='/jobs_splf/*ALL') Spoolfile storage by job
+                li(role='separator', class='divider')
+                li
+                  a(href='/ptf_group_info') PTF Group info
+                li
+                  a(href='/IBMi_program_call') IBM i Program/Service Call
+                li
+                  a(href='/IBMi_cl_command') IBM i CL Command

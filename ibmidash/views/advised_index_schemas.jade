@@ -1,0 +1,15 @@
+include ./includes/header.jade
+
+h1=title
+table(class='table table-striped table-hover table-condensed')
+  thead
+    tr
+      th Schema
+      th Number Advised
+  tbody
+    - each row in results
+      tr
+        td: a(href='/advised_indexes/#{row.DBNAME}')=row.DBNAME 
+        td=row.NBRADV
+          
+include ./includes/footer.jade

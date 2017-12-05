@@ -1,0 +1,31 @@
+include ./includes/header.jade
+
+h1=title
+table(class='table table-striped table-hover table-condensed')
+  thead
+    tr
+      th File
+      th Description
+      th Member
+      th Last changed
+      th Last used
+      th(style="text-align:right") Rows
+      th(style="text-align:right") Deleted rows
+      th(style="text-align:right") Percent deleted
+      th(style="text-align:right") Data space
+      th(style="text-align:right") Deleted space
+  tbody
+    - each row in results
+      tr
+        td=row.SYSTEM_TABLE_NAME
+        td=row.TABLE_TEXT
+        td=row.SYSTEM_TABLE_MEMBER
+        td=row.LAST_CHANGED_DATE
+        td=row.LAST_USED_DATE
+        td(style="text-align:right").utility #{_.str.numberFormat(Number(row.NUMBER_ROWS), 0, ",", ".")}
+        td(style="text-align:right").utility #{_.str.numberFormat(Number(row.NUMBER_DELETED_ROWS), 0, ",", ".")}
+        td(style="text-align:right").utility #{_.str.numberFormat(Number(row.PERCENT_DELETED), 0, ",", ".")}
+        td(style="text-align:right").utility #{_.str.numberFormat(Number(row.DATA_SIZE), 0, ",", ".")}
+        td(style="text-align:right").utility #{_.str.numberFormat(Number(row.DELETED_SPACE), 0, ",", ".")}
+          
+include ./includes/footer.jade

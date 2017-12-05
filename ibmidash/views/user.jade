@@ -1,0 +1,21 @@
+include ./includes/header.jade
+
+.panel.panel-default
+  .panel-heading
+    =result.AUTHORIZATION_NAME
+  .panel-body
+    
+    table(class='table')
+      tr: td: b Status 
+        td=result.STATUS
+      tr: td: b Description
+        td=result.TEXT_DESCRIPTION 
+      tr: td: b Special Authorities 
+        td=result.SPECIAL_AUTHORITIES
+      tr: td: b Storage Used
+        td=result.STORAGE_USED        
+      tr: td: b Home Directory
+        td=result.HOME_DIRECTORY  
+      tr: td: b Last Used
+        td=result.LAST_USED_TIMESTAMP      
+include ./includes/footer.jade

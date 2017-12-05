@@ -1,0 +1,18 @@
+include ./includes/header.jade
+
+div.container
+    h2=title
+    p2=sql
+        br
+        | For more info&#160
+        a(href=url) Click Here
+    br
+    br
+    table.table.table-striped.table-hover.table-condensed
+            tbody
+            - each row, title in results[0]
+                tr
+                    td=title
+                    td=row
+        
+include ./includes/footer.jade
