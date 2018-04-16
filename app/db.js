@@ -17,6 +17,7 @@ CITY VARCHAR(100),               \
 STATE CHAR(2),                   \
 ZIPCOD NUMERIC(5, 0)             \
 )`
+// `...` String template in JAVASCRIPT espressioni in stringa multiriga ecc ecc.
 stmt.exec(sql, function(result, err){
   console.log('error:' + err)
   console.log('result:' + result)
