@@ -20,3 +20,16 @@ a={'nome':'Mario','cognome':'Rossi','indirizzo':'Via Verdi, 25'};
 // --> { nome: 'Mario', cognome: 'Rossi', indirizzo: 'Via Verdi, 25' } 
 console.log(a.indirizzo);
 // --> 'Via Verdi, 25'
+console.log("*****************************************")
+
+const query="select * from sample.users";
+
+let i=11;
+for(let i=0;i<5;i++){
+	// i is local
+}
+console.log("value of i is i==='11' = "+(i==='11') +" i=='11' ? "+(i=='11'));
+
+
+
+

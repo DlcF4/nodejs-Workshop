@@ -1,8 +1,8 @@
-var func1= (function () {
+var func1= (() => {
     var counter = 0; // private var
-    console.log('Module init '+counter);
+    console.log('Module init counter='+counter);
     return {
-        // JSON notation in javascript
+        // JSON notation 
         add: function () {
             
             return counter += 1;
@@ -17,11 +17,13 @@ var func1= (function () {
 })();
 
 var cnt=func1.add();
-console.log('cnt %d',cnt);
+console.log('func1.val %d',cnt);
 cnt=func1.add();
-console.log('cnt %d',cnt);
+console.log('func1.val %d',cnt);
 func1.del();
 console.log('func1.val %d',func1.val());
 console.log('func.counter= %d',func1.counter);
+//Ridefinisco counter 
 func1.counter=100;
 console.log('func.counter= %d',func1.counter);
+console.log('func1.val %d',func1.val());

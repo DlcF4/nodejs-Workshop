@@ -1,5 +1,6 @@
 var fs = require('fs');
-// callback anonima 
+console.log(fs);
+console.log(JSON.stringify(fs));
 fs.readFile('dati.txt', "utf8", function(err,data){
     console.log('-- Callback --');
     if(err) {
