@@ -1,3 +1,4 @@
+
 var a =4; 
 console.log(typeof a);
 // --> 'number' 
@@ -29,7 +30,4 @@ for(let i=0;i<5;i++){
 	// i is local
 }
 console.log("value of i is i==='11' = "+(i==='11') +" i=='11' ? "+(i=='11'));
-
-
-
 

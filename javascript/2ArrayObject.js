@@ -1,3 +1,4 @@
+
 // Array
 var arr = ["one", "two", 3]; // Dichiarazione Array .
 console.log("Init array");
@@ -78,8 +79,4 @@ var sum = [0, 1, 2, 3].reduce(function(a, b) {
   return a + b;
 }, 0);
 console.log('Sum = '+sum)
-
-
-
-
 

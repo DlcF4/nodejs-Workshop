@@ -24,4 +24,3 @@ async function asyncCall() {
 }
 
 asyncCall();
-

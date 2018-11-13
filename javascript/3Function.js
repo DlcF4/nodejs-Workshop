@@ -23,11 +23,3 @@ console.log("f(5,3,8) --> %d",result);
 var end=' \n is the result of arrow function!'
 console.log(`f(5,3,8) --> ${result}  ${end}.`);
 
-
-
-
-
-
-
-
-
