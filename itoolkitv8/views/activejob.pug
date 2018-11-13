@@ -1,0 +1,10 @@
+h1=title
+ form(method='get',action=form_action)
+  p Filter : 
+    input(type="text", name="filter", value=filter)
+  p
+    button(type="submit") submit
+ 
+ textarea#resp(rows=32, cols=150 , name="resp") | #{data}
+br
+a(href='/') Back

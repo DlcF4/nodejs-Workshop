@@ -1,0 +1,13 @@
+h2=title
+ form(method='get',action=form_action)
+  p Primo parametro : 
+    input(type="text", name="a", value=a, maxlength="10")
+  p Secondo parametro : 
+    input(type="text", name="b", value=b, maxlength="10")
+  p
+    button(type="submit") submit
+ h4 RESULT
+ h1!= result
+ h5!= plist
+br
+a(href='/') Back

@@ -1,6 +1,6 @@
 const xt = require('/QOpenSys/QIBM/ProdData/OPS/Node6/os400/xstoolkit/lib/itoolkit');
 
-//process.env.DB2CCSID = '65535'; // CSSID forzato altrimenti sql 
+process.env.DB2CCSID = '65535'; // CSSID forzato altrimenti sql 
 //Conversione carattere tra CCSID 1208 e CCSID 65535 non valida.
 //Error: SQLSTATE=57017 SQLCODE=-332 Conversione carattere tra CCSID 1208 e CCSID 65535 non valida.
 
@@ -82,7 +82,7 @@ app.get('/rpg_programm', function(req, res) {
 				result:plist[2].value,
 				form_action:'/rpg_programm'
 				});
-		});
+		},true);
 		
 	}
 	else
